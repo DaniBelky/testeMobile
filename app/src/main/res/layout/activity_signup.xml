@@ -5,8 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
-    android:background="@color/white"
-    tools:context=".SignupActivity">
+    android:background="#F5F4FA"
+    tools:context=".SignupActivity"
+    >
 
     <ImageView
         android:id="@+id/imgLogo"
@@ -24,7 +25,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="111dp"
         android:layout_height="32dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:text="Criar conta"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -35,34 +36,35 @@
 
     <TextView
         android:id="@+id/tvDesc"
-        android:layout_width="242dp"
-        android:layout_height="53dp"
+        android:layout_width="310dp"
+        android:layout_height="52dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="32dp"
         android:text="Com uma conta, você pode encontrar um novo amigo e também anunciar um pet que precisa de um lar."
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="#a9a9a9"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintHorizontal_bias="0.441"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/etName"
-        android:layout_width="344dp"
+        android:layout_width="346dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:hint="Nome completo"
         android:inputType="textPersonName"
         android:padding="12dp"
-        android:textColor="@color/black"
+        android:textColor="#d3d3d3"
+        android:background="@drawable/borda_fina"
         app:layout_constraintTop_toBottomOf="@+id/tvDesc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/etEmail"
         android:layout_width="346dp"
         android:layout_height="48dp"
@@ -70,37 +72,40 @@
         android:hint="E-mail"
         android:inputType="textEmailAddress"
         android:padding="12dp"
-        android:textColor="@color/black"
+        android:textColor="#a9a9a9"
+        android:background="@drawable/borda_fina"
         app:layout_constraintTop_toBottomOf="@+id/etName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/etPassword"
-        android:layout_width="345dp"
+        android:layout_width="346dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:hint="Senha"
         android:inputType="textPassword"
         android:padding="12dp"
         android:maxLength="8"
-        android:textColor="@color/black"
+        android:textColor="#a9a9a9"
+        android:background="@drawable/borda_fina"
         app:layout_constraintTop_toBottomOf="@+id/etEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5" />
 
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:id="@+id/etConfirm"
         android:layout_width="346dp"
-        android:layout_height="47dp"
+        android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:hint="Confirmar senha"
         android:inputType="textPassword"
         android:padding="12dp"
         android:maxLength="8"
-        android:textColor="@color/black"
+        android:textColor="#a9a9a9"
+        android:background="@drawable/borda_fina"
         app:layout_constraintTop_toBottomOf="@+id/etPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,28 +126,30 @@
         android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="72dp"
         android:text="Possui uma conta? Entrar"
         android:textColor="@color/purple_700"
-        app:layout_constraintTop_toBottomOf="@id/layoutSocial"
-        app:layout_constraintStart_toStartOf="parent"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:focusable="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutSocial" />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/btnCreate"
-        android:layout_width="300dp"
+        android:layout_width="346dp"
         android:layout_height="58dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#4E35A4"
+        android:elevation="6dp"
         android:text="Criar a minha conta"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:cornerRadius="24dp"
-        android:elevation="6dp"
-        app:layout_constraintTop_toBottomOf="@+id/etConfirm"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
