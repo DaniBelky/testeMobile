@@ -13,11 +13,5 @@ public class SignupActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
-
-        MaterialButton btnCreate = findViewById(R.id.btnCreate);
-
-        btnCreate.setOnClickListener(v ->
-                Toast.makeText(this, "Conta criada com sucesso!", Toast.LENGTH_SHORT).show()
-        );
     }
 }
