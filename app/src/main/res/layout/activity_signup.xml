@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="#F5F4FA"
-    tools:context=".SignupActivity"
-    >
+    tools:context=".SignupActivity">
 
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="254dp"
         android:layout_height="76dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="44dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/meuxamego_logo"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,102 +53,132 @@
         android:layout_width="346dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/borda_fina"
         android:hint="Nome completo"
         android:inputType="textPersonName"
         android:padding="12dp"
         android:textColor="#d3d3d3"
-        android:background="@drawable/borda_fina"
-        app:layout_constraintTop_toBottomOf="@+id/tvDesc"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
 
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="346dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/borda_fina"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:textColor="#a9a9a9"
-        android:background="@drawable/borda_fina"
-        app:layout_constraintTop_toBottomOf="@+id/etName"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName" />
 
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="346dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/borda_fina"
         android:hint="Senha"
         android:inputType="textPassword"
-        android:padding="12dp"
         android:maxLength="8"
+        android:padding="12dp"
         android:textColor="#a9a9a9"
-        android:background="@drawable/borda_fina"
-        app:layout_constraintTop_toBottomOf="@+id/etEmail"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
-    <EditText
-        android:id="@+id/etConfirm"
-        android:layout_width="346dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:hint="Confirmar senha"
-        android:inputType="textPassword"
-        android:padding="12dp"
-        android:maxLength="8"
-        android:textColor="#a9a9a9"
-        android:background="@drawable/borda_fina"
-        app:layout_constraintTop_toBottomOf="@+id/etPassword"
-        app:layout_constraintStart_toStartOf="parent"
+    <TextView
+        android:id="@+id/txtTermos2"
+        android:layout_width="326dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="24dp"
+        android:autoLink="web"
+        android:focusable="true"
+        android:gravity="center"
+        android:linksClickable="true"
+        android:text="Ao criar a conta você estará de acordo com nossos "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreate"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTermos"
+        android:layout_width="326dp"
+        android:layout_height="32dp"
+        android:layout_marginBottom="4dp"
+        android:autoLink="web"
+        android:focusable="true"
+        android:gravity="center"
+        android:linksClickable="true"
+        android:text="Termos de Uso"
+        android:textColor="@color/purple_700"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <LinearLayout
         android:id="@+id/layoutSocial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="12dp"
-        app:layout_constraintTop_toBottomOf="@+id/etConfirm"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirm" />
 
     <TextView
         android:id="@+id/tvLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="Possui uma conta? Entrar"
-        android:textColor="@color/purple_700"
         android:autoLink="web"
-        android:linksClickable="true"
         android:focusable="true"
+        android:linksClickable="true"
+        android:text="Possui uma conta? "
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layoutSocial" />
+        tools:layout_editor_absoluteY="565dp" />
+
+    <TextView
+        android:id="@+id/tvLogin2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:focusable="true"
+        android:linksClickable="true"
+        android:text="Entrar"
+        android:textColor="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.667"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="565dp" />
 
     <Button
         android:id="@+id/btnCreate"
         android:layout_width="346dp"
         android:layout_height="58dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
         android:backgroundTint="#4E35A4"
         android:elevation="6dp"
         android:text="Criar a minha conta"
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:cornerRadius="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etConfirm" />
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
