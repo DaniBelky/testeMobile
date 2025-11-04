@@ -32,55 +32,70 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/img_1" />
 
+
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="411dp"
-        android:layout_height="138dp"
-        android:layout_marginBottom="184dp"
+        android:id="@+id/wave"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:rotationX="180"
         android:rotationY="180"
         android:scaleType="fitXY"
         android:src="@drawable/wave"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/white_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.30" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="421dp"
-        android:layout_height="234dp"
-        android:layout_marginBottom="4dp"
-        android:rotationX="180"
-        android:rotationY="180"
+        android:id="@+id/white_background"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scaleType="fitXY"
         android:src="@drawable/quadrado_white"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="-10dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25" />
 
     <FrameLayout
-        android:layout_width="200dp"
-        android:layout_height="190dp"
+        android:id="@+id/frameMainImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/circle_white"
         android:clipToOutline="true"
         android:padding="0dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="174dp">
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.10"
+        app:layout_constraintVertical_bias="0.30">
 
         <ImageView
-            android:layout_width="206dp"
-            android:layout_height="199dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:scaleType="centerCrop"
             android:src="@drawable/menina_and_dog" />
     </FrameLayout>
 
+
     <FrameLayout
-        android:layout_width="124dp"
-        android:layout_height="120dp"
+        android:id="@+id/frameCat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@drawable/circle_white"
         android:clipToOutline="true"
         android:elevation="4dp"
-        android:padding="0dp"
-        tools:layout_editor_absoluteX="273dp"
-        tools:layout_editor_absoluteY="316dp">
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.90"
+        app:layout_constraintVertical_bias="0.45">
 
         <ImageView
             android:layout_width="match_parent"
@@ -89,15 +104,24 @@
             android:src="@drawable/gato" />
     </FrameLayout>
 
+
+
     <FrameLayout
-        android:layout_width="129dp"
-        android:layout_height="119dp"
+        android:id="@+id/frameDog"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:background="@drawable/circle_white"
         android:clipToOutline="true"
         android:elevation="4dp"
         android:padding="0dp"
-        tools:layout_editor_absoluteX="266dp"
-        tools:layout_editor_absoluteY="55dp">
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.90"
+        app:layout_constraintVertical_bias="0.08">
 
         <ImageView
             android:layout_width="match_parent"
@@ -106,8 +130,9 @@
             android:src="@drawable/dog" />
     </FrameLayout>
 
+
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/title"
         android:layout_width="357dp"
         android:layout_height="94dp"
         android:layout_marginStart="14dp"
@@ -118,11 +143,11 @@
         android:textColor="#343A40"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
+        app:layout_constraintEnd_toEndOf="@+id/wave"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/wave"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.70" />
 
     <TextView
         android:id="@+id/textView3"
@@ -135,14 +160,14 @@
         android:textAlignment="center"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/wave"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/wave"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.854" />
 
     <Button
-        android:id="@+id/buttonEntrar"
+        android:id="@+id/loginButton"
         android:layout_width="346dp"
         android:layout_height="58dp"
         android:layout_marginStart="26dp"
@@ -150,14 +175,13 @@
         android:layout_marginEnd="33dp"
         android:backgroundTint="#4E35A4"
         android:elevation="3dp"
-        android:text="ver pets disponiveis"
+        android:text="Login"
         android:textColor="@color/white"
-        android:textSize="10dp"
         app:cornerRadius="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="@+id/wave"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintStart_toStartOf="@+id/wave"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.975" />
 

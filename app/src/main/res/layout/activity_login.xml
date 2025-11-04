@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -118,19 +117,6 @@
         app:layout_constraintVertical_bias="0.654" />
 
     <View
-        android:id="@+id/linhaDireita"
-        android:layout_width="140dp"
-        android:layout_height="1dp"
-        android:background="#BDBDBD"
-        app:layout_constraintBottom_toBottomOf="@+id/txtOu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@+id/txtOu"
-        app:layout_constraintTop_toTopOf="@+id/txtOu"
-        app:layout_constraintVertical_bias="0.578" />
-
-    <View
         android:id="@+id/linhaEsquerda"
         android:layout_width="140dp"
         android:layout_height="1dp"
@@ -161,7 +147,7 @@
         app:layout_constraintVertical_bias="0.73" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/googleIcon"
         android:layout_width="48dp"
         android:layout_height="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -174,32 +160,38 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="139dp"
-        android:layout_height="19dp"
-        android:text="Possui uma conta?"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Ainda não possui uma conta?"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.402"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintTop_toBottomOf="@id/googleIcon"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.877" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp" />
+
 
     <TextView
         android:id="@+id/textViewLinkCadastro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:clickable="true"
         android:focusable="true"
-        android:text="Entrar"
+        android:text="Cadastre-se aqui!"
         android:textAlignment="center"
         android:textColor="#4E35A4"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.664"
+        android:textSize="14sp"
+        app:layout_constraintWidth_percent="0.4"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintTop_toBottomOf="@id/textView5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.876" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.80"
+        android:layout_marginTop="8dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

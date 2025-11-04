@@ -10,28 +10,30 @@
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="254dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/meuxamego_logo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvTitle"
-        android:layout_width="111dp"
+        android:layout_width="113dp"
         android:layout_height="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:text="Criar conta"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgLogo" />
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
+        app:layout_constraintWidth_percent="0.8" />
 
     <TextView
         android:id="@+id/tvDesc"
@@ -50,14 +52,15 @@
 
     <EditText
         android:id="@+id/etName"
-        android:layout_width="346dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/borda_fina"
         android:hint="Nome completo"
         android:inputType="textPersonName"
         android:padding="12dp"
         android:textColor="#d3d3d3"
+        app:layout_constraintWidth_percent="0.84"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,14 +68,15 @@
 
     <EditText
         android:id="@+id/etEmail"
-        android:layout_width="346dp"
-        android:layout_height="48dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/borda_fina"
         android:hint="E-mail"
         android:inputType="textEmailAddress"
         android:padding="12dp"
         android:textColor="#a9a9a9"
+        app:layout_constraintWidth_percent="0.84"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,8 +84,8 @@
 
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="346dp"
-        android:layout_height="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/borda_fina"
         android:hint="Senha"
@@ -89,96 +93,142 @@
         android:maxLength="8"
         android:padding="12dp"
         android:textColor="#a9a9a9"
+        app:layout_constraintWidth_percent="0.84"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etEmail" />
 
+    <EditText
+        android:id="@+id/etConfirmPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/borda_fina"
+        android:hint="Confirmar Senha"
+        android:inputType="textPassword"
+        android:maxLength="8"
+        android:padding="12dp"
+        android:textColor="#a9a9a9"
+        app:layout_constraintWidth_percent="0.84"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword" />
+
     <TextView
         android:id="@+id/txtTermos2"
-        android:layout_width="326dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="24dp"
-        android:autoLink="web"
-        android:focusable="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autoSizeMaxTextSize="16sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
         android:gravity="center"
-        android:linksClickable="true"
-        android:text="Ao criar a conta você estará de acordo com nossos "
+        android:text="Ao criar a conta você estará de acordo com nossos"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreate"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etConfirmPassword"
+        app:layout_constraintWidth_percent="0.85" />
 
     <TextView
         android:id="@+id/txtTermos"
-        android:layout_width="326dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="4dp"
-        android:autoLink="web"
-        android:focusable="true"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:linksClickable="true"
         android:text="Termos de Uso"
+        android:textAlignment="center"
         android:textColor="@color/purple_700"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeMaxTextSize="18sp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintTop_toBottomOf="@id/txtTermos2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
     <LinearLayout
         android:id="@+id/layoutSocial"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintTop_toBottomOf="@+id/etPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etConfirm" />
+        app:layout_constraintEnd_toEndOf="parent">
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autoLink="web"
-        android:focusable="true"
-        android:linksClickable="true"
-        android:text="Possui uma conta? "
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.439"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="565dp" />
-
-    <TextView
-        android:id="@+id/tvLogin2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autoLink="web"
-        android:focusable="true"
-        android:linksClickable="true"
-        android:text="Entrar"
-        android:textColor="@color/purple_700"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.667"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="565dp" />
 
     <Button
         android:id="@+id/btnCreate"
-        android:layout_width="346dp"
-        android:layout_height="58dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="12dp"
         android:backgroundTint="#4E35A4"
         android:elevation="6dp"
         android:text="Criar a minha conta"
         android:textAllCaps="false"
-        android:textColor="@color/white"
-        app:cornerRadius="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/tvLogin"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        app:cornerRadius="28dp"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintTop_toBottomOf="@id/txtTermos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layoutLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btnCreate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="Possui uma conta?"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnCreate"
+        app:layout_constraintWidth_percent="0.85" />
+
+    <TextView
+        android:id="@+id/tvLogin2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text=" Entrar"
+        android:textColor="@color/purple_700"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLogin"
+        app:layout_constraintWidth_percent="0.85" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
