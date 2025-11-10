@@ -5,12 +5,15 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.models.Dados;
 
 public class LoginActivity extends AppCompatActivity {
     EditText editTextEmail, editTextSenha;
+
+    Button loginButton = findViewById(R.id.buttonEntrar);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +24,11 @@ public class LoginActivity extends AppCompatActivity {
 
         linkCadastro.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+            startActivity(intent);
+        });
+
+        loginButton.setOnClickListener(v ->{
+            Intent intent = new Intent(LoginActivity.this, InicioActivity.class);
             startActivity(intent);
         });
 

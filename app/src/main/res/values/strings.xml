@@ -14,5 +14,9 @@
     <string name="cadastre">Cadastre-se aqui</string>
 
     <string name="status_icon">sucesso no cadastro</string>
+
+    <string name="hello">Olá, Daniel !</string>
+
+    <string name="see">Veja os pets prontos para ganhar um lar cheio de amor.</string>
 </resources>
 
