@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string name="welcome">Bem-Vindo ao Meu Xamego</string>
+
+    <string name="access">Acesse sua conta para continuar.</string>
+
+    <string name="forgot">esqueceu seu senha?</string>
+
+    <string name="ou">ou</string>
+
+    <string name="dontHave">Ainda não possui uma conta?</string>
+
+    <string name="cadastre">Cadastre-se aqui</string>
+
+    <string name="status_icon">sucesso no cadastro</string>
 </resources>
+
